@@ -1,0 +1,69 @@
+/* You can add global styles to this file, and also import other style files */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.fill-svgwhite {
+ fill: white;
+}
+.fill-svggrey {
+ fill: rgb(69,111,173) ;
+}
+
+.bg-btntoogle {
+    background: rgb(69,111,173) ;
+}
+.text-toogle {
+    color: rgb(69,111,173) ;
+}
+body,input,button {
+    background-color:   rgb(243 244 246);
+    font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+h1,h2,h3,h4,h5 {
+    font-weight: 200;
+    color: black;font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+ 
+    
+}
+
+p,span,hr {
+    color: black;font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+    font-weight: normal;
+}
+.cursor{
+    cursor:pointer;
+}
+
+  .loadingSpinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loadingSpinner span {
+    padding: 0 0.1rem;
+    font-size: 20px;
+    animation: zoomup 1s ease infinite;
+    display: inline-block;
+    animation-delay: calc(200ms * var(--i));
+    color: rgb(69,111,173) ;
+  }
+  
+  @keyframes zoomup {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.5) translateY(-8px);
+    opacity: 0.3;
+
+    
+    }
+  }

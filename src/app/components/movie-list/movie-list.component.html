@@ -1,0 +1,21 @@
+
+  <div class="flex justify-between items-center mb-4">
+    <div>
+        <button 
+            class="mr-2 px-4 py-2 rounded-[2rem] focus:outline-none shadow-md text-toogle"
+            [ngClass]="{'bg-btntoogle text-white': viewMode === 'grid', 'bg-white text-toogle': viewMode !== 'grid'}"
+            (click)="toggleViewMode('grid')">
+                Сетка
+                <app-icon [src]="icons.grid" [class]="'w-6 h-6 ml-2 inline'"  [angClass]="getDynamicClasses('grid')"></app-icon>
+        </button>
+        <button 
+            class="px-4 py-2 rounded-[2rem] focus:outline-none shadow-md"
+            [ngClass]="{'bg-btntoogle text-white': viewMode === 'list', 'bg-white text-toogle ': viewMode !== 'list'}"
+            (click)="toggleViewMode('list')">
+                Лист  
+                <app-icon [src]="icons.list" [class]="'w-6 h-6 ml-2 inline'"  [angClass]="getDynamicClasses('list')"></app-icon>
+        </button>
+    </div>
+</div>
+  
+<app-movie [movies]="movies" [viewMode]="viewMode"></app-movie>

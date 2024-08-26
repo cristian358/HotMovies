@@ -1,0 +1,13 @@
+<div class="swiper">
+    <div class="swiper-wrapper">
+        <div *ngFor="let actor of cast" class="sm:w-full swiper-slide text-white text-center flex flex-col items-center">
+            <ng-container *ngIf="actor.profile_path ">
+                <img [src]="actor.profile_path | poster" class="rounded-lg shadow-md  object-cover mb-2">
+            </ng-container>
+            <ng-container *ngIf="!actor.profile_path">
+                <img src="../../../assets/noImage.png" class="rounded-lg shadow-md  object-cover mb-2">
+            </ng-container>
+            <span class="text-md font-semibold mt-2 text-gray-800">{{actor.name}}</span>
+        </div>
+    </div>
+</div>
